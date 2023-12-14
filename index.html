@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+
+<body>
+
+    <script>
+        function setAmount(amount, currency) {
+            this.amount = amount;
+            this.currency = currency;
+        }
+
+        setAmount.prototype[Symbol.toPrimitive] = function (hint) {
+            var result;
+            switch (hint) {
+                case 'string':
+                    result = this.amount + " " + this.currency;
+                    break;
+                case 'number':
+                    result = this.amount;
+                    break;
+                case 'default':
+                    result = this.amount + " " + this.currency;
+                    break;
+            }
+            return result;
+        };
+
+
+        function Amount(amount, currency = 'USD') {
+            let amoSetter = new setAmount();
+            amoSetter.amount = amount;
+            amoSetter.currency = currency;
+            return amoSetter;
+        }
+
+        var amount = Amount("2000.57", "BDT");
+
+        console.log(amount * 10 / 100); // working
+
+        console.log('You have to pay ' + amount); // working
+
+        console.log(amount - 100.57); // working
+
+        console.log(10 + +amount); // working working
+    </script>
+</body>
+
+</html>
