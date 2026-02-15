@@ -4,9 +4,7 @@ A brief description of what this project does and its purpose.
 
 ## Features
 
-- Feature 1
-- Feature 2
-- Feature 3
+- JavaScript basic practice is uploading here
 
 ## Installation
 
@@ -33,4 +31,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-Your Name - your.email@example.com
+Your Name - mdrahmanashiqur3@gmail.com
