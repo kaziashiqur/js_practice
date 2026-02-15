@@ -31,4 +31,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-Your Name - mdrahmanashiqur3@gmail.com
+Md Ashiqur Rahman - mdrahmanashiqur3@gmail.com
